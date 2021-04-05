@@ -1,5 +1,6 @@
 package com.example.selenium;
 
+import com.example.selenium.steps.UserSteps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -8,13 +9,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import javax.swing.*;
+
 import static org.testng.Assert.assertEquals;
 
 public class PlainLoginTest {
+
     private WebDriver driver;
+
 
     @BeforeClass
     public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver 2");
         driver = new ChromeDriver();
     }
 
